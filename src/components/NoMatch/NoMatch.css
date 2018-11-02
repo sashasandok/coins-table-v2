@@ -1,0 +1,12 @@
+.no-match {
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+strong {
+  color: rgb(185, 56, 56);
+}

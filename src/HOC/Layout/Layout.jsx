@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // styles
-import './Layout.scss'
+import './Layout.css'
 import img from '../../assets/images/coin.jpeg'
 
 // semantic-ui

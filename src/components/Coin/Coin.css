@@ -1,0 +1,8 @@
+.CellLeft {
+  text-align: left;
+}
+.CellCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

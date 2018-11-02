@@ -7,7 +7,7 @@
 }
 
 .layout-header {
-  background-color: #282c34;
+  background-color: #454647;
   min-height: 60px;
   display: flex;
   flex-direction: row;
@@ -38,8 +38,9 @@
   justify-content: center;
   flex: 1 0 auto;
   background-color: rgb(58, 58, 58);
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1.5vmin);
   overflow: auto;
+  padding-bottom: 17px;
 }
 
 .layout-footer {
