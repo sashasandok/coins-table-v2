@@ -1,5 +1,6 @@
 // react
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // semantic-ui
 import { Table, Label, Pagination } from 'semantic-ui-react'
@@ -26,7 +27,7 @@ class CoinTable extends Component {
   }
 
   render() {
-    const { page, exchange } = this.props
+    const { page, exchange, coins } = this.props
     return (
       <Layout>
         <Table
@@ -52,7 +53,7 @@ class CoinTable extends Component {
               </Table.HeaderCell>
             </Table.Row>
           </Table.Header>
-          <Coins coins={this.props.coins} page={page} exchange={exchange} />
+          <Coins coins={coins} page={page} exchange={exchange} />
         </Table>
         <Pagination
           activePage={page}
@@ -63,6 +64,14 @@ class CoinTable extends Component {
       </Layout>
     )
   }
+}
+
+CoinTable.propTypes = {
+  getCoins: PropTypes.func.isRequired,
+  setPage: PropTypes.func.isRequired,
+  page: PropTypes.number.isRequired,
+  exchange: PropTypes.instanceOf(Object),
+  coins: PropTypes.instanceOf(Array),
 }
 
 const mapStateToProps = state => ({

@@ -1,5 +1,6 @@
 // react
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // semantic-ui
 import { Table } from 'semantic-ui-react'
@@ -7,7 +8,7 @@ import { Table } from 'semantic-ui-react'
 // components
 import Coin from '../Coin/Coin'
 
-export default class Coins extends Component {
+class Coins extends Component {
   render() {
     const { coins, isFetching, page, exchange } = this.props
     return (
@@ -26,3 +27,12 @@ export default class Coins extends Component {
     )
   }
 }
+
+Coins.propTypes = {
+  isFetching: PropTypes.bool.isRequired,
+  page: PropTypes.number.isRequired,
+  exchange: PropTypes.instanceOf(Object),
+  coins: PropTypes.instanceOf(Array),
+}
+
+export default Coins

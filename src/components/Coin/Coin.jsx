@@ -1,5 +1,6 @@
 // react
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // semanic-ui
 import { Table, Image, Loader } from 'semantic-ui-react'
@@ -13,7 +14,7 @@ import { imageUrl } from '../../api/api-client'
 // style
 import classes from './Coin.css'
 
-export const Coin = props => {
+const Coin = props => {
   return (
     <Table.Row key={props.index}>
       <Table.Cell style={{ textAlign: 'left' }}>
@@ -32,6 +33,13 @@ export const Coin = props => {
       </Table.Cell>
     </Table.Row>
   )
+}
+
+Coin.propTypes = {
+  index: PropTypes.number.isRequired,
+  page: PropTypes.number.isRequired,
+  exchange: PropTypes.instanceOf(Object),
+  coin: PropTypes.instanceOf(Object),
 }
 
 export default Coin
