@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
     "node-sass": "^4.9.4",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
@@ -12,6 +16,7 @@
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
     "react-scripts": "2.0.5",
+    "react-test-renderer": "^16.6.0",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4",
     "redux-logger": "^3.0.6",
@@ -25,6 +30,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/jestSetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
