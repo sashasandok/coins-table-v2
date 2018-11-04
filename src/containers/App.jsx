@@ -9,12 +9,10 @@ import NoMatch from '../components/NoMatch/NoMatch'
 const App = () => {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={CoinsTable} />
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={CoinsTable} />
+        <Route component={NoMatch} />
+      </Switch>
     </Router>
   )
 }
