@@ -14,10 +14,8 @@ const NoMatch = () => {
   return (
     <Layout>
       <strong className="no-match">
-        <p>
-          <Icon name="minus circle" size="big" />
-          404 Page not found!
-        </p>
+        <Icon name="minus circle" size="big" />
+        <span>404 Page not found!</span>
       </strong>
     </Layout>
   )
