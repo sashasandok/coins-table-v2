@@ -12,6 +12,7 @@ import Layout from '../../HOC/Layout/Layout'
 import Coins from '../../components/Coins/Coins'
 
 // Redux
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 // actions
@@ -81,10 +82,14 @@ const mapStateToProps = state => ({
   exchange: state.exchange.items,
 })
 
-const mapDispatchToProps = dispatch => ({
-  getCoins: () => dispatch(getCoins()),
-  setPage: args => dispatch(setPage(args)),
-})
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      getCoins,
+      setPage,
+    },
+    dispatch,
+  )
 
 export default connect(
   mapStateToProps,

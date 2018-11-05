@@ -1,8 +1,8 @@
 // api
-import { get } from './api-client';
+import { get } from './api-client'
 
 export default {
   getCoins: () => {
-    return get('all/coinlist');
-  }
-};
+    return get('all/coinlist')
+  },
+}
