@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout testing layout header 1`] = `
+<div
+  className="layout"
+>
+  <header
+    className="layout-header"
+  >
+    <p>
+      Coins Table
+    </p>
+    <div>
+      <img
+        alt="image"
+        className="ui image"
+        height={50}
+        src="coin.jpeg"
+        width={50}
+      />
+    </div>
+  </header>
+  <section
+    className="layout-content"
+  />
+  <footer
+    className="layout-footer"
+  >
+    © Alex_Sandok 2018
+  </footer>
+</div>
+`;
