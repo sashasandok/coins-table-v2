@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Layout testing layout component 1`] = `
+<div
+  className="layout"
+>
+  <header
+    className="layout-header"
+  >
+    <p>
+      Coins Table
+    </p>
+    <div>
+      <img
+        alt="image"
+        className="ui image"
+        height={50}
+        src="coin.jpeg"
+        width={50}
+      />
+    </div>
+  </header>
+  <section
+    className="layout-content"
+  >
+    <table
+      className="ui table"
+    >
+      <thead
+        className=""
+      >
+        <tr
+          className=""
+        >
+          <th
+            className="two wide"
+          >
+            <p>
+              Order Number
+            </p>
+          </th>
+          <th
+            className="two wide"
+          >
+            <p>
+              Coin Icon
+            </p>
+          </th>
+          <th
+            className=""
+          >
+            <p>
+              Coin Name
+            </p>
+          </th>
+          <th
+            className=""
+          >
+            <p>
+              USD
+            </p>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className=""
+      />
+    </table>
+  </section>
+  <footer
+    className="layout-footer"
+  >
+    © Alex_Sandok 2018
+  </footer>
+</div>
+`;
+
 exports[`Layout testing layout header 1`] = `
 <div
   className="layout"
