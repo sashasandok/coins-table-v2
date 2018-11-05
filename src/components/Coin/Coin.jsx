@@ -11,20 +11,17 @@ import { PAGE_COUNT } from '../../actions/coins-action'
 // utils
 import { imageUrl } from '../../api/api-client'
 
-// style
-import classes from './Coin.css'
-
 const Coin = props => {
   return (
     <Table.Row key={props.index}>
-      <Table.Cell style={{ textAlign: 'left' }}>
+      <Table.Cell textAlign="left" width={2}>
         {(props.page - 1) * PAGE_COUNT + props.index + 1}.
       </Table.Cell>
-      <Table.Cell className={classes.CellCenter}>
+      <Table.Cell width={2}>
         <Image src={imageUrl(props.coin.imageUrl)} size="mini" />
       </Table.Cell>
-      <Table.Cell style={{ textAlign: 'left' }}>{props.coin.name}</Table.Cell>
-      <Table.Cell style={{ textAlign: 'left' }}>
+      <Table.Cell textAlign="left">{props.coin.name}</Table.Cell>
+      <Table.Cell textAlign="left">
         {!props.exchange[props.coin.symbol] ? (
           <Loader active inline="centered" size="tiny" />
         ) : (

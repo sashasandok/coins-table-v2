@@ -1,13 +1,13 @@
 // redux
-import { handleActions } from 'redux-actions';
+import { handleActions } from 'redux-actions'
 
 // actions
-import actions from '../actions/exchange-action';
+import actions from '../actions/exchange-action'
 
 export const initialState = {
   error: '',
-  items: {}
-};
+  items: {},
+}
 
 export default handleActions(
   {
@@ -16,15 +16,15 @@ export default handleActions(
       isFetching: false,
       items: {
         ...state.items,
-        ...payload.values
-      }
+        ...payload.values,
+      },
     }),
 
     [actions.exchange.error]: (state, { payload }) => ({
       ...state,
       isFetching: false,
-      error: payload.error
-    })
+      error: payload.error,
+    }),
   },
-  initialState
-);
+  initialState,
+)

@@ -10,7 +10,8 @@ import Coin from '../Coin/Coin'
 
 class Coins extends Component {
   render() {
-    const { coins, isFetching, page, exchange } = this.props
+    const { coins, page, exchange } = this.props
+
     return (
       <Table.Body>
         {coins.map((item, index) => (
@@ -19,7 +20,6 @@ class Coins extends Component {
             key={item.id}
             coin={item}
             page={page}
-            isFetching={isFetching}
             exchange={exchange}
           />
         ))}
@@ -29,7 +29,6 @@ class Coins extends Component {
 }
 
 Coins.propTypes = {
-  isFetching: PropTypes.bool.isRequired,
   page: PropTypes.number.isRequired,
   exchange: PropTypes.instanceOf(Object),
   coins: PropTypes.instanceOf(Array),

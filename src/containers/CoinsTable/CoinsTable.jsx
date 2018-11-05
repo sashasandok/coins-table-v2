@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // semantic-ui
-import { Table, Label, Pagination } from 'semantic-ui-react'
+import { Table, Pagination } from 'semantic-ui-react'
 
 // hoc's
 import Layout from '../../HOC/Layout/Layout'
@@ -39,17 +39,17 @@ class CoinTable extends Component {
         >
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>
-                <Label ribbon> Order Number</Label>
+              <Table.HeaderCell width={2}>
+                <p>Order Number</p>
+              </Table.HeaderCell>
+              <Table.HeaderCell width={2}>
+                <p>Coin Icon</p>
               </Table.HeaderCell>
               <Table.HeaderCell>
-                <Label ribbon>Coin Icon</Label>
+                <p>Coin Name</p>
               </Table.HeaderCell>
               <Table.HeaderCell>
-                <Label ribbon>Coin Name</Label>
-              </Table.HeaderCell>
-              <Table.HeaderCell>
-                <Label ribbon>USD</Label>
+                <p>USD</p>
               </Table.HeaderCell>
             </Table.Row>
           </Table.Header>

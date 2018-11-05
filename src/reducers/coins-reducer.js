@@ -1,43 +1,43 @@
 // redux
-import { handleActions } from 'redux-actions';
+import { handleActions } from 'redux-actions'
 
 // actions
-import actions from '../actions/coins-action';
+import actions from '../actions/coins-action'
 
 export const initialState = {
   isFetching: false,
   error: '',
   page: 1,
-  items: {}
-};
+  items: {},
+}
 
 export default handleActions(
   {
-    [actions.coin.request]: (state, { payload }) => ({
+    [actions.coin.request]: state => ({
       ...state,
       isFetching: true,
       error: '',
-      items: []
+      items: [],
     }),
 
     [actions.coin.success]: (state, { payload }) => ({
       ...state,
       isFetching: false,
       items: payload.items,
-      [payload.page]: payload.items
+      [payload.page]: payload.items,
     }),
 
     [actions.setPage]: (state, { payload }) => ({
       ...state,
 
-      page: payload.page
+      page: payload.page,
     }),
 
     [actions.coin.error]: (state, { payload }) => ({
       ...state,
       isFetching: false,
-      error: payload.error
-    })
+      error: payload.error,
+    }),
   },
-  initialState
-);
+  initialState,
+)

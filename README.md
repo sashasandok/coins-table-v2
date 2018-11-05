@@ -17,3 +17,5 @@ Local Development Environment Setup:
 - Launch 'coins-table-v2' with npm start or yarn start.
 
 - Open in your browser tab http://localhost:3000/
+
+- To run tests type 'npm test or yarn test' at the root of your local project folder
